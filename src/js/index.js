@@ -47,10 +47,18 @@ form.addEventListener('submit', (e) => {
                         backgroundColor: 'red',
                         messageColor: 'white',
                     });
+                    loadBtn.disabled = true;
+                    loadBtn.style.display = 'none'
+                    loadBtn.style.opacity = 0;
+                    loadBtn.style.overflow = 'hidden';
+                } else {
+                    loadBtn.disabled = false;
+                    loadBtn.style.display = 'flex';
+                    loadBtn.style.opacity = 1;
+                    loadBtn.style.overflow = 'visible';
                 }
                 
-                loadBtn.style.opacity = 1;
-                loadBtn.style.overflow = 'visible';
+                
                 
             })
             .catch(error => {
@@ -114,8 +122,9 @@ function btnChange() {
                         messageColor: 'white',
         });
         loadBtn.disabled = true;
+        loadBtn.style.display = 'none'
         loadBtn.style.opacity = 0;
-        loadBtn.style.overflow = hidden;
+        loadBtn.style.overflow = 'hidden';
     }
 
 }
